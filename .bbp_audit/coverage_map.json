@@ -1,0 +1,62 @@
+{
+  "timestamp_utc": "2026-04-18T02:41:03Z",
+  "http_routes": [
+    {
+      "path": "/healthcheck",
+      "handler": "Healthcheck endpoint",
+      "source": "zuul-sample filters/inbound/Routes"
+    },
+    {
+      "path": "/*",
+      "handler": "ProxyEndpoint routeVIP=api",
+      "source": "zuul-sample filters/inbound/Routes"
+    }
+  ],
+  "push_endpoints": [
+    {
+      "protocol": "websocket",
+      "path": "PushProtocol.WEBSOCKET path",
+      "auth": "SamplePushAuthHandler cookie userAuthCookie"
+    },
+    {
+      "protocol": "sse",
+      "path": "PushProtocol.SSE path",
+      "auth": "SamplePushAuthHandler cookie userAuthCookie"
+    }
+  ],
+  "auth_flows": [
+    {
+      "component": "StripUntrustedProxyHeadersHandler",
+      "boundary": "untrusted client headers vs trusted proxy headers",
+      "config": "allowProxyHeadersWhen + mTLS/proxy protocol"
+    },
+    {
+      "component": "SamplePushAuthHandler",
+      "boundary": "client cookie to push identity"
+    }
+  ],
+  "deserialization_boundaries": [],
+  "file_io_boundaries": [
+    {
+      "component": "SampleServerStartup.loadFromResources",
+      "type": "loads TLS cert/key files from resources"
+    }
+  ],
+  "ci_cd": [
+    ".github/workflows/check.yml",
+    ".github/workflows/snapshot.yml",
+    ".github/workflows/dependency-submission.yml"
+  ],
+  "covered_files": [
+    "zuul-core/src/main/java/com/netflix/netty/common/proxyprotocol/StripUntrustedProxyHeadersHandler.java",
+    "zuul-core/src/main/java/com/netflix/zuul/netty/server/BaseServerStartup.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/SampleServerStartup.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/Debug.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/inbound/DebugRequest.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/push/SamplePushAuthHandler.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/outbound/ZuulResponseFilter.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/push/SampleWebSocketPushChannelInitializer.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/push/SampleSSEPushChannelInitializer.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/inbound/Routes.java"
+  ]
+}

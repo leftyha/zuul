@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-04-18T02:41:03Z",
+  "last_updated_utc": "2026-04-18T02:41:03Z",
+  "repo_root": "/workspace/zuul",
+  "state_files": [
+    "manifest.json",
+    "repo_fingerprint.json",
+    "coverage_map.json",
+    "hypotheses.jsonl",
+    "findings.jsonl",
+    "ruled_out.jsonl",
+    "tested_paths.jsonl",
+    "todo_queue.jsonl",
+    "run_log.md"
+  ],
+  "runs": 1
+}

@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-04-18T02:41:03Z",
+  "commit": "c1d9cef2012fae1b12779b5e7a8285b278d28321",
+  "current_branch": "work",
+  "default_branch": "unknown_no_remote",
+  "major_languages": [
+    "java",
+    "groovy",
+    "properties",
+    "yaml"
+  ],
+  "frameworks": [
+    "Netty",
+    "Gradle"
+  ],
+  "package_managers": [
+    "gradle"
+  ],
+  "dependency_manifests": [
+    "build.gradle",
+    "settings.gradle",
+    "gradle.properties",
+    "dependencies.lock",
+    "zuul-core/build.gradle",
+    "zuul-discovery/build.gradle",
+    "zuul-sample/build.gradle",
+    "zuul-processor/build.gradle"
+  ],
+  "infra_files": [],
+  "ci_cd_files": [
+    ".github/workflows/snapshot.yml",
+    ".github/workflows/check.yml",
+    ".github/workflows/dependency-submission.yml"
+  ],
+  "auth_related_modules": [
+    "zuul-core/src/main/java/com/netflix/netty/common/proxyprotocol/StripUntrustedProxyHeadersHandler.java",
+    "zuul-core/src/main/java/com/netflix/zuul/netty/server/BaseServerStartup.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/push/SamplePushAuthHandler.java"
+  ],
+  "network_entry_points": [
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/SampleServerStartup.java",
+    "zuul-core/src/main/java/com/netflix/zuul/netty/server/Server.java",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/inbound/Routes.java"
+  ],
+  "hotspot_hashes": {
+    "zuul-core/src/main/java/com/netflix/netty/common/proxyprotocol/StripUntrustedProxyHeadersHandler.java": "ddbeb5c34239ecf9719dd2d6902ea1ea15771242d5f38e30a919e4b83b8c05cf",
+    "zuul-core/src/main/java/com/netflix/zuul/netty/server/BaseServerStartup.java": "ba4e4c57c49137151d0c0eeb73b57e77d5a6c6240188cfc8c13bea456d1c0f1c",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/SampleServerStartup.java": "d69404ada9d2b339746015f3c7f9e6355fb8884574aa7981b848e05b37eb16bb",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/Debug.java": "e1142d03a176f6aa3b53c3298f30f6dba1723e23cc1c6c20e0d6de1c77f7895e",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/filters/inbound/DebugRequest.java": "4b8b6ede201e39e359866b7c77c60f550b2b4a268008656facacb38e82574166",
+    "zuul-sample/src/main/java/com/netflix/zuul/sample/push/SamplePushAuthHandler.java": "c5b418a4d88a20dc59f6365f3af9d205f640505cbb60b3c9ae6a6ee5ab4fbaee"
+  }
+}

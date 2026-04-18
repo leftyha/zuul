@@ -1,0 +1,2 @@
+{"timestamp_utc": "2026-04-18T02:41:03Z", "priority": "high", "task": "Verify whether zuul-sample filters are in bounty production scope; if yes, attempt deterministic repro of debugRequest log exposure in controlled local deployment."}
+{"timestamp_utc": "2026-04-18T02:41:03Z", "priority": "medium", "task": "If JDK21 available, execute proxyprotocol unit tests to bolster ruled-out status with runtime evidence."}
